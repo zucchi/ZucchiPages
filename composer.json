@@ -1,0 +1,32 @@
+{
+    "name": "zucchi/zucchi-cms",
+    "description": "Simple Zend Framework 2 CMS",
+    "type": "library",
+    "keywords": [
+        "cms",
+        "zf2"
+    ],
+    "homepage": "https://github.com/zucchi/ZucchiCms",
+    "authors" : [{
+        "name": "Matt Cockayne",
+        "email" : "matt@zucchi.co.uk",
+        "homepage" : "http://devincharge.com/"
+    }],
+    "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "dev-master",
+        "doctrine/common": "dev-master",
+        "doctrine/doctrine-module": "dev-master",
+        "zucchi/zucchi": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZucchiCms": "src/"
+        },
+        "classmap": [
+            "./"
+        ]
+    }
+}
