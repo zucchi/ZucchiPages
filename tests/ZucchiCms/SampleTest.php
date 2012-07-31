@@ -7,7 +7,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace ZendSkeletonModuleTest;
+namespace ZucchiPagesTest;
 
 class SampleTest extends Framework\TestCase
 {

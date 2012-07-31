@@ -2,7 +2,7 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'zms-frontend' => 'ZucchiPages\Controller\FrontendController',
+            'zucchi-pages-frontend' => 'ZucchiPages\Controller\FrontendController',
         ),
     ),
     // default route 
@@ -17,7 +17,7 @@ return array(
                         // Change this value to reflect the namespace in which
                         // the controllers for your module are found
                         '__NAMESPACE__' => 'ZucchiPages\Controller',
-                        'controller'    => 'FrontendController',
+                        'controller'    => 'zucchi-pages-frontend',
                         'action'        => 'index',
                     ),
                 ),
@@ -33,7 +33,7 @@ return array(
                             'regex'    => '/(?<slug>[a-zA-Z0-9\/_-])',
                             'defaults' => array(
                                 '__NAMESPACE__' => 'ZucchiPages\Controller',
-                                'controller' => 'zms-frontend',
+                                'controller' => 'zucchi-pages-frontend',
                                 'format' => 'html',
                             ),
                             'spec' => '/%slug%',
