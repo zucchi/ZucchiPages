@@ -1,12 +1,12 @@
 {
-    "name": "zucchi/zucchi-cms",
+    "name": "zucchi/zucchi-pages",
     "description": "Simple Zend Framework 2 CMS",
     "type": "library",
     "keywords": [
         "cms",
         "zf2"
     ],
-    "homepage": "https://github.com/zucchi/ZucchiCms",
+    "homepage": "https://github.com/zucchi/ZucchiPages",
     "authors" : [{
         "name": "Matt Cockayne",
         "email" : "matt@zucchi.co.uk",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-0": {
-            "ZucchiCms": "src/"
+            "ZucchiPages": "src/"
         },
         "classmap": [
             "./"
