@@ -1,6 +1,6 @@
 **ZucchiPages**
 
-Simple webpages
+Simple webpages module for ZF2
 
 *Installation*
 
