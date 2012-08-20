@@ -3,4 +3,5 @@
 return array(
     'ZucchiPages\Module'                        => __DIR__ . '/Module.php',
     'ZucchiPages\Controller\FrontendController' => __DIR__ . '/src/ZucchiPages/Controller/FrontendController.php',
+    'ZucchiPages\Controller\AdminController' => __DIR__ . '/src/ZucchiPages/Controller/AdminController.php',
 );
