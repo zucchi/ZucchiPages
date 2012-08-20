@@ -3,6 +3,7 @@
     "description": "Simple Zend Framework 2 CMS",
     "type": "library",
     "keywords": [
+        "zucchi",
         "cms",
         "zf2"
     ],
