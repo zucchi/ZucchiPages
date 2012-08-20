@@ -1,4 +1,4 @@
-**ZucchiLayout**
+**ZucchiPages**
 
 Simple webpages
 
