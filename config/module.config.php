@@ -18,9 +18,9 @@ return array(
     'router' => array(
         'routes' => array(
             'ZucchiPages' => array(
-                'type'    => 'Literal',
+                'type'    => 'Segment',
                 'options' => array(
-                    'route'    => '/',
+                    'route'    => '/page[/]',
                     'defaults' => array(
                         'controller'    => 'zucchi-pages-frontend',
                         'action'        => 'index',
