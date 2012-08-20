@@ -3,8 +3,4 @@
 return array(
     'ZucchiPages\Module'                        => __DIR__ . '/Module.php',
     'ZucchiPages\Controller\FrontendController' => __DIR__ . '/src/ZucchiPages/Controller/FrontendController.php',
-
-    // tests
-    'ZucchiPagesTest\Framework\TestCase'        => __DIR__ . '/tests/ZucchiPages/Framework/TestCase.php',
-    'ZucchiPagesTest\SampleTest'                => __DIR__ . '/tests/ZucchiPages/SampleTest.php',
 );

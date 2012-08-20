@@ -3,7 +3,16 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'zucchi-pages-frontend' => 'ZucchiPages\Controller\FrontendController',
+            'zucchi-pages-admin' => 'ZucchiPages\Controller\AdminController',
         ),
+    ),
+    'navigation' => array(
+        'ZucchiAdmin' => array(
+            'pages' => array(
+                'label' => 'Pages',
+                'route' => 'ZucchiAdmin/ZucchiPages',
+            ),
+        )
     ),
     // default route 
     'router' => array(
@@ -11,33 +20,57 @@ return array(
             'ZucchiPages' => array(
                 'type'    => 'Literal',
                 'options' => array(
-                    // Change this to something specific to your module
                     'route'    => '/',
                     'defaults' => array(
-                        // Change this value to reflect the namespace in which
-                        // the controllers for your module are found
-                        '__NAMESPACE__' => 'ZucchiPages\Controller',
                         'controller'    => 'zucchi-pages-frontend',
                         'action'        => 'index',
                     ),
                 ),
+                'priority' => 0,
                 'may_terminate' => true,
                 'child_routes' => array(
-                    // This route is a sane default when developing a module;
-                    // as you solidify the routes for your module, however,
-                    // you may want to remove it and replace it with more
-                    // specific routes.
-                    'default' => array(
+                    'page' => array(
                         'type'    => 'Regex',
                         'options' => array(
-                            'regex'    => '/(?<slug>[a-zA-Z0-9\/_-])',
+                            'regex'    => '(?<slug>[a-zA-Z0-9\/_-]*)',
                             'defaults' => array(
-                                '__NAMESPACE__' => 'ZucchiPages\Controller',
                                 'controller' => 'zucchi-pages-frontend',
                                 'format' => 'html',
                             ),
                             'spec' => '/%slug%',
                         ),
+                        'may_terminate' => true,
+                        'child_routes' => array(
+                            'format' => array(
+                                'type'    => 'Regex',
+                                'options' => array(
+                                    'regex'    => '.(?<format>[a-zA-Z]*)$',
+                                    'defaults' => array(
+                                        'controller' => 'zucchi-pages-frontend',
+                                        'format' => 'html',
+                                    ),
+                                    'spec' => '/%slug%.%format%',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+            'ZucchiAdmin' => array(
+                'child_routes' => array(
+                    'ZucchiPages' => array(
+                        'type'    => 'Segment',
+                        'options' => array(
+                            'route' => '/pages[/:action]',
+                            'constraints' => array(
+                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]+',
+                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]+',
+                            ),
+                            'defaults' => array(
+                                'controller' => 'zucchi-pages-admin',
+                            )
+                        ),
+                        'may_terminate' => true,
                     ),
                 ),
             ),
