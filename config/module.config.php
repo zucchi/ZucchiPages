@@ -68,11 +68,22 @@ return array(
                             ),
                             'defaults' => array(
                                 'controller' => 'zucchi-pages-admin',
+                                'action' => 'index',
                             )
                         ),
                         'may_terminate' => true,
                     ),
                 ),
+            ),
+        ),
+    ),
+    'translator' => array(
+        'locale' => 'en_GB',
+        'translation_patterns' => array(
+            array(
+                'type'     => 'gettext',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern'  => '%s.mo',
             ),
         ),
     ),

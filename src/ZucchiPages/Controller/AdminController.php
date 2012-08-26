@@ -16,5 +16,8 @@ use Zucchi\Debug\Debug;
 
 class AdminController extends AbstractAdminController
 {
-
+    public function indexAction()
+    {
+        
+    }
 }
