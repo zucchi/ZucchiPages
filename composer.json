@@ -27,7 +27,7 @@
             "ZucchiPages": "src/"
         },
         "classmap": [
-            "./"
+            "./Module.php"
         ]
     }
 }

@@ -92,4 +92,15 @@ return array(
             'ZucchiPages' => __DIR__ . '/../view',
         ),
     ),
+    'ZucchiSecurity' => array(
+        'permissions' => array(
+            'resources' => array(
+                'route' =>array(
+                    'ZucchiAdmin' => array(
+                        'children' => array('ZucchiPages'),
+                    )
+                ),
+            ),
+        ),
+    ),
 );
